@@ -10,6 +10,28 @@ spring:
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       enable-auto-commit: true
       auto-commit-interval-ms: 1000
+  mail:
+    host: smtp.example.com
+    port: 587
+    username: your-email@gmail.com # Replace with real email
+    password: your-email-password # Replace with Gmail app password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+# Email notification configuration
+notification:
+  email:
+    from: noreply@library.com
+    to:
+      librarian: librarian@example.com # Replace with real email address
+      user: user@example.com # Replace with real email address
+    subjects:
+      book-borrowed: "📖 Book Borrowed from Library"
+      book-returned: "🔄 Book Returned to Library"
 
 server:
   port: 8091

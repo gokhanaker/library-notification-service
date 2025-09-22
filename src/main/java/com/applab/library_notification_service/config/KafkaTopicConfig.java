@@ -23,12 +23,4 @@ public class KafkaTopicConfig {
                 .replicas(1)
                 .build();
     }
-
-    @Bean
-    public NewTopic bookAddedTopic() {
-    return TopicBuilder.name("book-added")
-            .partitions(1)
-            .replicas(1)
-            .build();
-    }
 }
